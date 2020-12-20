@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+    <title>Demo jsf</title>
+</h:head>
+
+<h:body>
+    <h:form>
+        <h3>Create car</h3>
+        <div class="ui-fluid p-formgrid p-grid">
+            <div class="p-field p-col">
+                <p:outputLabel for="brand" value="Brand" />
+                <p:inputText value="#{carViewController.car.brand}" id="brand" />
+            </div>
+            <div class="p-field p-col">
+                <p:outputLabel for="color" value="Color" />
+                <p:inputText value="#{carViewController.car.color}" id="color" />
+            </div>
+            <div class="p-field p-col">
+                <p:outputLabel for="year" value="Year" />
+                <p:inputText value="#{carViewController.car.year}" id="year" />
+            </div>
+
+            <p:commandLink id="nonAjax" action="#{carViewController.saveCar}" style="margin:20px;" ajax="false" value="submit">
+            </p:commandLink>
+        </div>
+    </h:form>
+</h:body>
+
+</html>
